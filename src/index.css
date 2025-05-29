@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-background text-foreground overflow-hidden;
+}
+
+.task-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kanban-column {
+  min-height: calc(100vh - 240px);
+}
+
+.timeline-task {
+  transition: opacity 0.2s ease;
+}
+
+.timeline-task:hover {
+  opacity: 0.9;
+}
+
+.dependency-arrow {
+  stroke: #a1a1aa;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.calendar-day {
+  min-height: 100px;
+}
+
+.calendar-day:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.calendar-event {
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
